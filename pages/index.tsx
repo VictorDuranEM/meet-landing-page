@@ -70,8 +70,8 @@ export default function Home() {
       </div>
       <NumberInCircle text="02" className="mt-10 relative -bottom-7 z-10" />
       <div className='bg-no-repeat bg-cover text-center text-white' style={{backgroundImage: `url(${footerBackground})`}}>
-        <div className="bg-[#4D96A9]/90 pb-[72px] px-6 pt-24 md:pb-[66px] xl:flex xl:items-center xl:pb-[104px] xl:text-left xl:justify-evenly">
-          <h2 className='font-black text-[2rem] leading-[2.25rem] max-w-[457px] mx-auto md:text-[2.5rem] md:leading-[2.75rem] xl:m-0'>Experience more together</h2>
+        <div className="bg-[#4D96A9]/90 pb-[72px] px-6 pt-24 md:pb-[66px] xl:flex xl:items-center xl:pb-[104px] xl:text-left xl:justify-evenly xl:pt-[116px]">
+          <h2 className='font-black text-[2rem] leading-[2.25rem] max-w-[457px] mx-auto md:text-[2.5rem] md:leading-[2.75rem] xl:m-0 xl:max-w-[380px]'>Experience more together</h2>
           <p className='mt-6 font-medium text-lg leading-[1.625rem] max-w-[573px] mx-auto md:mt-8 xl:max-w-[350px] xl:m-0'>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
           <Button2 text1='Download' text2='v1.3' className='mt-8 md:mt-10 xl:m-0' />
         </div>
