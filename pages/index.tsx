@@ -65,7 +65,7 @@ export default function Home() {
         <div className='mt-16 xl:mt-20'>
           <p className='text-[#4D96A9] uppercase font-black text-base leading-[1.625rem] tracking-[4px]'>Build for modern use</p>
           <h2 className='mt-6 font-black text-[2rem] leading-[2.25rem] max-w-[445px] mx-auto md:text-[2.5rem] md:leading-[2.75rem]'>Smarted meetings, all in one place</h2>
-          <p className='mt-8 font-medium text-base leading-[1.625rem] text-[#87879D] max-w-[573px] mx-auto'>Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+          <p className='mt-8 font-medium text-base leading-[1.625rem] text-[#87879D] max-w-[573px] mx-auto xl:text-lg xl:leading-[1.625rem]'>Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
         </div>
       </div>
       <NumberInCircle text="02" className="mt-10 relative -bottom-7 z-10" />
