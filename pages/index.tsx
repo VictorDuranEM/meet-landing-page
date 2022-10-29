@@ -18,7 +18,8 @@ export default function Home() {
   const [screenWidth, setScreenWidth] = useState(0);
   let isDesktop = screenWidth >= 1280;
   let isTablet = screenWidth >= 768;
-
+  let footerBackground = isDesktop ? '/desktop/image-footer.jpg' : isTablet ? '/tablet/image-footer.jpg' : '/mobile/image-footer.jpg';
+  
   const updateMedia = () => {
     setScreenWidth(window.innerWidth);
   };
@@ -33,15 +34,14 @@ export default function Home() {
     <div className='overflow-hidden max-w-[1440px] mx-auto'>
       <Head>
         <title>Meet Landing Page</title>
-        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap" rel="stylesheet"></link>
       </Head>
 
       <Image src={logo} alt="logo" className="mx-auto mt-12" />
 
-      {!isDesktop && <Image src={imageHeroTablet} alt="imageHeroTablet" className="mx-auto mt-14 w-[108%] max-w-none -translate-x-[4%]" />}
+      {!isDesktop && <Image src={imageHeroTablet} alt="imageHeroTablet" priority className="mx-auto mt-14 w-[108%] max-w-none -translate-x-[4%]" />}
 
       <div className='mt-12 px-6 xl:flex xl:justify-between xl:items-center'>
-        {isDesktop && <Image src={imageHeroLeft} alt="imageHeroLeft" className="-translate-x-14" />}
+        {isDesktop && <Image src={imageHeroLeft} alt="imageHeroLeft" priority className="-translate-x-14" />}
         <div className='mx-auto'>
           <div className='text-center'>
             <h1 className='font-black text-[2.5rem] leading-[2.75rem] md:text-5xl max-w-[339px] mx-auto md:mt-[4.5rem] xl:text-[4rem] xl:max-w-[445px]'>Group Chat for Everyone</h1>
@@ -52,15 +52,15 @@ export default function Home() {
             <Link className='rounded-[29px] py-4 px-[29px] bg-[#855FB1] hover:bg-[#B18BDD]' href="#">What is it?</Link>
           </div>
         </div>
-        {isDesktop && <Image src={imageHeroRight} alt="imageHeroRight" className="translate-x-14 self-end" />}
+        {isDesktop && <Image src={imageHeroRight} alt="imageHeroRight" priority className="translate-x-14 self-end" />}
       </div>
       <NumberInCircle text="01" className="mt-16 md:mt-20 xl:mt-[7.3rem]" />
       <div className="px-6 mt-16 md:mt-[67px] text-center">
         <div className="inline-grid grid-cols-2 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-none xl:max-w-[1110px]">
-          <Image className="rounded-lg" src={imageWomenVideoChatting} alt="imageWomenVideoChatting" />
-          <Image className="rounded-lg" src={imageWomanInVideoCall} alt="imageWomanInVideoCall" />
-          <Image className="rounded-lg" src={imageMenInMeeting} alt="imageMenInMeeting" />
-          <Image className="rounded-lg" src={imageManTexting} alt="imageManTexting" />
+          <Image priority className="rounded-lg" src={imageWomenVideoChatting} alt="imageWomenVideoChatting" />
+          <Image priority className="rounded-lg" src={imageWomanInVideoCall} alt="imageWomanInVideoCall" />
+          <Image priority className="rounded-lg" src={imageMenInMeeting} alt="imageMenInMeeting" />
+          <Image priority className="rounded-lg" src={imageManTexting} alt="imageManTexting" />
         </div>
         <div className='mt-16 xl:mt-20'>
           <p className='text-[#4D96A9] uppercase font-black text-base leading-[1.625rem] tracking-[4px]'>Build for modern use</p>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </div>
       <NumberInCircle text="02" className="mt-10 relative -bottom-7 z-10" />
-      <div className={`bg-[url('/${isDesktop? 'desktop': isTablet? 'tablet' : 'mobile'}/image-footer.jpg')] bg-no-repeat bg-cover text-center text-white`}>
+      <div className='bg-no-repeat bg-cover text-center text-white' style={{backgroundImage: `url(${footerBackground})`}}>
         <div className="bg-[#4D96A9]/90 pb-[72px] px-6 pt-24 md:pb-[66px] xl:flex xl:items-center xl:pb-[104px] xl:text-left xl:justify-evenly">
           <h2 className='font-black text-[2rem] leading-[2.25rem] max-w-[457px] mx-auto md:text-[2.5rem] md:leading-[2.75rem] xl:m-0'>Experience more together</h2>
           <p className='mt-6 font-medium text-lg leading-[1.625rem] max-w-[573px] mx-auto md:mt-8 xl:max-w-[350px] xl:m-0'>Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
