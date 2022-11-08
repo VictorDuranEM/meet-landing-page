@@ -48,6 +48,6 @@ In future projects, I want to include data fetching so learn how to use the getS
 
 ## Author
 
-- Website - [EnterMatch](https://entermatch.com/)
+- Website - [EnterMatch](https://entermatch.io/)
 - Frontend Mentor - [@VictorDuranEM](https://www.frontendmentor.io/profile/VictorDuranEM)
 - Twitter - [@EnterMatchPulse](https://twitter.com/EnterMatchPulse)
